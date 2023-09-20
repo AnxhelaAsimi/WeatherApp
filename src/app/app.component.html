@@ -1,7 +1,11 @@
 <div class="container">
-  <div class="upper-data">
-    <img src="../assets/day.svg" *ngIf="isDay">
-    <img src="../assets/night.svg" *ngIf="!isDay" >
+  <div class="upper-data" [ngClass]="isDay? 'daytime': 'nighttime'">
+    <div class="location">Tirane</div>
+    <div class="temperature">{{ 14.40 | number: '1.0-0'}} °C</div>
+    <div> min: 10</div>
+    <div> max: 30</div>
+    <div> humidity: 30%</div>
+    <div> wind: 15km/h</div>
 
   </div>
   <div class="lower-data">
